@@ -1,0 +1,20 @@
+{
+  "name": "vtoullec",
+  "homepage": "https://github.com/VinceBoul/vtoullec.github.io",
+  "authors": [
+    "VinceBoul <vtoullec@gmail.com>"
+  ],
+  "description": "CV website",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "Semantic-UI#^2.2.6"
+  }
+}
