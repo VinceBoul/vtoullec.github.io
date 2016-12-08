@@ -10,10 +10,13 @@ var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 
 var sourcesLibJS = ['bower_components/jquery/dist/jquery.js',
-        'bower_components/semantic/dist/semantic.min.js'];
+        'bower_components/semantic/dist/*.min.js'];
 
 var sourcesLibCSS = ['bower_components/semantic/dist/*.min.css'];
 
+var font_dir = "bower_components/semantic/dist/themes/default/assets/fonts/";
+var sourcesFonts = [font_dir+"*.ttf", font_dir+"*.woff", font_dir+"*.woff2",
+                    font_dir+"*.eot", font_dir+"*.otf", font_dir+"*.svg"]
 var sourcesSASS = ['sass/*.scss'];
 var sourcesJS = ['javascript/*.js'];
 
@@ -89,17 +92,14 @@ gulp.task('compass', function() {
         .pipe(gulp.dest('css'));
 });
 
+// Fonts
 
-//IMAGE TASK: Just pipe images from project folder to public web folder
-//gulp.task('img', function() {
-  //  return gulp.src('app/Resources/public/img/**/*.*')
-/*        .pipe(gulp.dest('web/img'));
-});*/
+gulp.task('fonts', function() {
+    return gulp.src(sourcesFonts)
+            .pipe(gulp.dest('css/themes/default/assets/fonts/'));
+});
 
-/* Default TASK : se lance avec "gulp" dans l'invite de commande
-   - éxécute les taches configurées. 
-   - La dernière tache 'watch' attend l'édition des fichiers SASS et JS pour regénérer style.css et app.js 
-*/
+
 gulp.task('style', ['css', 'compass', 'sassTask']);
 gulp.task('js', ['jsLib', 'jsTask']);
-gulp.task('default', ['style', 'js', 'watch']);
+gulp.task('default', ['style', 'js', 'fonts', 'watch']);
