@@ -10,7 +10,7 @@ var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 
 var sourcesLibJS = ['bower_components/jquery/dist/jquery.js',
-        'bower_components/semantic/dist/*.min.js'];
+        'bower_components/semantic/dist/*.min.js', 'bower_components/waypoints/lib/*.min.js'];
 
 var sourcesLibCSS = ['bower_components/semantic/dist/*.min.css'];
 

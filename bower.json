@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "semantic": "Semantic-UI#^2.2.6"
+    "semantic": "Semantic-UI#^2.2.6",
+    "waypoints": "^4.0.1"
   }
 }

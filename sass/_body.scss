@@ -1,0 +1,37 @@
+.hidden.menu {
+display: none;
+}
+.masthead.segment {
+min-height: 400px;
+padding: 1em 0em;
+}
+
+.masthead h2 {
+font-size: 1.7em;
+font-weight: normal;
+}
+
+.ui.vertical.stripe .floated.image {
+clear: both;
+}
+.ui.vertical.stripe p {
+font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+margin: 2em 0em;
+}
+.quote.stripe.segment {
+padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+padding-top: 5em;
+padding-bottom: 5em;
+}
+.footer.segment {
+padding: 5em 0em;
+}
+.secondary.pointing.menu .toc.item {
+display: none;
+}
+
+
